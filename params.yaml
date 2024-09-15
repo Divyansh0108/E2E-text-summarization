@@ -1,1 +1,10 @@
-key: value,
+TrainingArguments:
+  num_train_epochs: 5 # Integer
+  warmup_steps: 500 # Integer
+  per_device_train_batch_size: 1 # Integer
+  weight_decay: 0.01 # Float
+  logging_steps: 10 # Integer
+  evaluation_strategy: "steps" # String with quotes
+  eval_steps: 500 # Integer
+  save_steps: 1000000 # Integer (1e6 converted to integer)
+  gradient_accumulation_steps: 16 # Integer
